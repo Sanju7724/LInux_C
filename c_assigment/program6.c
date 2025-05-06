@@ -2,6 +2,7 @@
  program to read characters by character from the file input.txt and print the numbwr of 1,2,3,4...etc*/
 
 #include<stdio.h>
+#include<ctype.h>
 int main()
 {
 	int count = 0, i =0;
@@ -10,7 +11,7 @@ int main()
 	fp = fopen("input.txt","r");
 	while((ch = fgetc(fp)) != EOF)
 	{
-		if(ch == 32)
+		if(isalnum(ch))
 		{
 			count++;
 		}
